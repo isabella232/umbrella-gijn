@@ -1,0 +1,72 @@
+// import variables and mixins from largo
+@import "variables.less";
+@import "mixins.less";
+
+// less files for this child theme
+@import 'vars.less';
+@import '_header.less';
+@import '_widgets.less';
+@import 'members.less';
+@import 'resources.less';
+
+#site-footer a,
+#boilerplate a {
+  color: #eee;
+}
+#boilerplate a:hover,
+.donate-btn a:hover,
+#site-footer a:hover,
+#related-post-nav a:hover {
+  color: #fff;
+}
+@media ( max-width: 980px ) {
+  .load-more {
+    margin-bottom: 24px;
+  }
+} 
+@media ( max-width: 768px ) {
+  #site-footer {
+    .widget-area,
+    .widget,
+    div[class^="span"] {
+	  margin-bottom: 0;
+	  padding-top: 0 !important;
+	  padding-bottom: 0 !important;
+    }
+    ul li {
+	  font-size: 18px;
+	  line-height: 1.5;
+    }
+  }
+}
+
+.home {
+  #content-main {
+    padding-left: 2.12769574%;
+  }
+  .stories h2.entry-title {
+    font-size: 24px;
+  }
+}
+#homepage-featured h4.related-story {
+  font-size: 20px;	
+}
+.icon-listserv:before { content: '\75'; } // use the mail icon
+
+#mc_embed_signup {
+  input {
+    width: 90%;
+    padding: 5px;
+    display: block;
+    margin: 10px auto;
+    &.button {
+	  max-width: 65%;
+	  background-color: @red;
+	  border: none;
+	  color: #fff;
+	  &:hover {
+	    background-color: lighten(@red,10%);
+	  }
+    }
+  }
+}

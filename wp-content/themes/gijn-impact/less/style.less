@@ -1,0 +1,258 @@
+/*
+Theme Name:     GIJN - Impact Project Site
+Theme URI:      http://largoproject.org
+Description:    A child theme for GIJN's Impact Project site based on the Project Largo parent theme.
+Author:         Adam Schweigert/INN
+Author URI:     http://largoproject.org
+Template:       largo-dev
+Version:        0.1.0
+*/
+@ltgray: #efefef;
+@dkgray: #333;
+
+/* Largo essentials */
+@import "reset.less";
+@import "variables.less";
+@import "mixins.less";
+
+/* GIJN custom vars */
+@navbarBackground: @dkgray;
+@navbarText: @white;
+@navbarLinkColor: @navbarText;
+
+@stickyNavbarText: @textColor;
+@stickyNavbarLinkColor: @stickyNavbarText;
+@stickyNavbarLinkColorHover: @white;
+
+/* Largo nav styles */
+@import "navbar-common.less";
+@import "navbar-sticky.less";
+
+#main-nav.navbar {
+  li.dropdown .dropdown-menu li a {
+    color: @dkgray;
+
+    &:hover {
+      color: @navbarLinkColorHover;
+    }
+  }
+}
+
+a {
+  color: #6e1e23;
+  &:hover {
+    color: #962930;
+  }
+}
+
+.category .row-fluid .stories {
+  margin: 0 auto;
+  float: none;
+}
+.guide-page {
+  .author-posts-link {
+    display: none;
+  }
+  .entry-content .widget {
+    padding: 15px 0;
+  }
+  .pager {
+    a {
+      width: 100%;
+      box-sizing: border-box;
+      height: 100%;
+    }
+    h5.top-page {
+	  margin-bottom: 0;
+	  font-size: 21px;
+    }
+  }
+  .toggle-nav-bar {
+    display: none;
+  }
+  .guide-nav {
+    padding: 20px;
+    background-color: @ltgray;
+    h4 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      a {
+	    color: @dkgray;
+      }
+    }
+    .current_page_item {
+	  font-weight: bold;
+	  .children {
+	    font-weight: normal;
+	  }
+    }
+  }
+  h3.guide-author {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  .largo-author {
+    .widgettitle {
+      font-size: 18px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      color: @ltgray;
+    }
+    h5 {
+      margin-bottom: 8px;
+    }
+    ul {
+	  padding: 0;
+	  margin: 0;
+    }
+    .author-posts-link {
+      display: none;
+    }
+  }
+  @media screen and (max-width:782px) {
+    .guide-nav {
+      width: 100%;
+      padding: 0;
+      .container {
+        margin: 5px 10px;
+      }
+      .guide-tree,
+      .resources {
+        display: none;
+      }
+      .toggle-nav-bar {
+        display: block;
+        margin-top: 0
+      }
+      h4 {
+        font-size: 21px;
+        margin: 0.1em 0;
+        color: black;
+      }
+      ul {
+        margin: 0 -10px 0 44px
+      }
+      li {
+        display: block;
+        float: none;
+        > a {
+          padding: 6px 10px;
+        }
+      }
+      .resources h4 {
+        margin-left: 46px;
+      }
+    }
+    article.span9 {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 10px;
+      .entry-content h3 {
+	    font-size: 21px;
+	    margin-bottom: 12px;
+	    &.guide-author {
+		  margin-bottom: 0;
+	    }
+      }
+    }
+    .pager .next,
+    .pager .previous {
+	  width: 100%;
+	  margin-bottom: 8px;
+    }
+  }
+}
+.guide-resources {
+  margin-left: 0;
+  li {
+    display: block;
+  }
+  a {
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+  .attachment-meta {
+    white-space: nowrap;
+  }
+  i {
+    -webkit-font-smoothing: antialiased;
+  }
+  .icon-picture {
+    color: cadetblue;
+  }
+  .icon-play {
+    color: crimson;
+  }
+  .icon-table {
+    color: forestgreen;
+  }
+  .icon-doc-text {
+    color: mediumblue;
+  }
+  .icon-doc-text-inv {
+	color: firebrick;
+  }
+  .icon-download {
+    color: indigo;
+  }
+}
+
+/* Interviews category template */
+.video-container {
+  position: relative;
+  float: left;
+  padding: 0;
+  margin: 0 0 10px 0;
+
+  a {
+    display: block;
+    float: left;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    margin: 0 0 6px 0;
+  }
+
+  span.play-button-overlay {
+    position: absolute;
+    font-size: 4em;
+    text-shadow: 1px 1px 4px #343434;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    i {
+      display: block;
+      top: 50%;
+      margin-top: -48px;
+      position: relative;
+      text-align: center;
+    }
+  }
+}
+.category-interviews {
+  .entry-title {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  p {
+    font-size: 16px;
+  }
+}
+
+/* Footer */
+.footer-bg {
+  background-color: #302e2c;
+}
+#site-footer a {
+  color: #eee;
+  &:hover {
+    color: #fff;
+  }
+}
+.home #supplementary {
+  margin-bottom: 0;
+}

@@ -1,0 +1,132 @@
+@boxBorderColor: #ddd;
+
+.home {
+  .row-fluid {
+    margin-bottom: 24px;
+	h3 {
+		font-size: 32px;
+		a {
+			color: #000;
+		}
+	}
+  .case-study,
+	.resources {
+      img:hover A{
+	    opacity: 0.9;
+      }
+      h2 {
+        font-size: 21px;
+        line-height: 1.3;
+        background-color: #000;
+        padding: 12px;
+        a {
+	      color: #fff;
+	      &:hover {
+		    color: #dedede;
+		    text-decoration: none;
+	      }
+        }
+      }
+	  &.last {
+		padding-bottom: 24px;
+	  }
+    }
+  }
+}
+
+#report-and-resources {
+	padding-top: 18px;
+	h2 {
+		font-size: 24px;
+	}
+	.span6 a div {
+		width: 100%;
+		height: 500px;
+		background: #ccc;
+	}
+  .span12 {
+    margin-bottom: 24px;
+  }
+}
+
+#infographic-and-interviews {
+	border-top: 1px solid @boxBorderColor;
+	border-bottom: 1px solid @boxBorderColor;
+	padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+#google-ideas {
+	border: 1px solid @boxBorderColor;
+	padding: 24px;
+	small {
+		text-align: center;
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		color: #acacac;
+		text-align: center;
+		display: block;
+	}
+	p {
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-size: 16px;
+		color: #343434;
+		margin-top: 16px;
+    margin-bottom: 0;
+	}
+}
+
+#case-studies {
+	padding-top: 18px;
+}
+
+@media screen and (max-width: 980px) {
+
+}
+@media screen and (max-width: 767px) {
+	#content .top {
+		.featured-video,
+		.span4	{
+			width: 100%;
+		}
+	}
+	.home .row-fluid h3 {
+		font-size: 28px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+  .home {
+    .row-fluid {
+	  .span4,
+	  .span6,
+	  .span8 {
+	    width: 100%;
+	    margin: 0 0 24px;
+	  }
+    }
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+	#report-and-resources-container,
+	#case-studies {
+		width: 100%;
+	}
+	#report-and-resources-container {
+		margin-left: 0;
+	}
+	#report-and-resources-container .row-fluid {
+		float: left;
+		width: 48.93617020799999%;
+		margin-left: 2.127659574%
+	}
+	#report-and-resources-container .row-fluid.odd {
+		margin-left: 0;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.home .row-fluid h3 {
+		font-size: 24px;
+	}
+}

@@ -1,0 +1,196 @@
+/*
+ * Styles for the resources page
+ */
+// an individual resource link
+.resource-link {
+  margin-bottom: 1em;
+  border-radius: 0.5em;
+  position: relative;
+  a {
+    display: block;
+    padding: 2em;
+    text-decoration: none;
+  }
+  .title {
+    font-family: @sansFontFamily;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+  }
+  a:hover .title {
+    text-decoration: underline;
+  }
+
+
+  // If you are swapping span4 and span3 for the resource tiles, make sure this changes as well
+  &:nth-child(4n+1) {
+    margin-left: 0;
+    clear: left;
+  }
+  &.red {
+    background-color: @red-alt;
+    a {
+      color: @dkgrey;
+    }
+  }
+  &.dkgrey {
+    background-color: @dkgrey;
+    a {
+      color: @orange;
+    }
+  }
+  &.sedge {
+    background-color: @sedge;
+    a {
+      color: @red-alt;
+    }
+  }
+  &.orange {
+    background-color: @orange;
+    a {
+      color: @dkgrey;
+    }
+  }
+  &.khaki {
+    background-color: @khaki;
+    a {
+      color: @red-alt;
+    }
+  }
+}
+
+.page-template-page-resources {
+  h1.entry-title {
+    text-transform: uppercase;
+    color: @red-alt;
+  }
+  .entry-content p:first-child {
+    margin-top: 24px; // match margin-bottom;
+    border-top: 2px solid @dkgrey;
+    border-bottom: 2px solid @dkgrey;
+    font-family: @sansFontFamily;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    display: block;
+  }
+  .entry-content form {
+    margin-bottom: 1em;
+    clear: both;
+    > * {
+      float: left;
+      box-sizing: border-box;
+    }
+    label {
+      color: @red-alt;
+      font-family: @sansFontFamily;
+      font-weight: bold;
+      font-size: 18px;
+      width: 70px;
+    }
+    button {
+      background-color: @red-alt;
+      color: @khaki;
+      border-color: @red-alt;
+      border-style: solid;
+      border-width: 1px;
+      font-family: @sansFontFamily;
+      width: 50px;
+    }
+    select,
+    input {
+      font-family: @sansFontFamily;
+      background-color: #eee;
+    }
+    input {
+      width: 45%;
+      width: ~"calc( 100% - 70px - 50px - 100px)"; // the widths of the other elements in the form
+      min-width: 200px;
+    }
+    select {
+      height: 34px;
+      width: auto;
+      width: 100px;
+    }
+  }
+  .entry-content .widgettitle {
+    font-size: 15px;
+  }
+
+  .widget {
+    border: 2px @black solid;
+    border-radius: 0.5em;
+  }
+
+  // Styles specific to the WP_Widget_RSS
+  li a.rsswidget {
+    color: @red;
+    font-size: 20px;
+    font-family: @sansFontFamily;
+    font-weight: bold;
+    margin-bottom: 0.2em;
+  }
+  .rssSummary {
+    line-height: @baseLineHeight;
+  }
+}
+
+@media ( max-width:768px ) {
+  .resource-link.span3 {
+    width: 100%;
+    margin: 0 0 1em 0;
+    display: block;
+    clear: both;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .resource-link img {
+    max-width: 15%;
+  }
+  .resource-link .title {
+    position: static;
+    font-size: 1.5em;
+    padding-left: 1em;
+  }
+  .row .span6 {
+    width: 100%;
+    margin-left: 0;
+    
+  }
+}
+
+#advanced-search {
+  font-weight: bold;
+  font-size: 16px;
+  display: block;
+  border-bottom: 2px @black solid;
+  padding-bottom: 24px;
+
+  a {
+    text-decoration: none;
+  }
+}
+.sans {
+  font-family: @sansFontFamily;
+}
+.red:hover,
+.red {
+  color: @red-alt;
+}
+
+/*
+ * Here we break the Largo responsive styles for desktop and tablet devices, to create a wider central column and narrower right column
+ */
+@media @tabletUp {
+  .page-template-page-resources {
+    .row-fluid #content.span8 {
+      width: 73%;
+    }
+    .row-fluid #sidebar.span4 {
+      margin-left: 5%;
+      width: 22%;
+    }
+  }
+}
