@@ -24,9 +24,7 @@ function gijn_custom_homepage_layouts() {
 		'HomepageBlog',
 		'HomepageSingle',
 		'HomepageSingleWithFeatured',
-		'HomepageSingleWithSeriesStories',
-		'TopStories',
-		'Slider'
+		'HomepageSingleWithSeriesStories'
 	);
 
 	foreach ($unregister as $layout)
