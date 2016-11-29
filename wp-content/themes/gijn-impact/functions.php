@@ -1,5 +1,14 @@
 <?php
 
+// This site is an INN Member
+if ( !defined( 'INN_MEMBER' ) {
+    define( 'INN_MEMBER', true) ;
+}
+
+// This site is hosted by INN
+if ( !defined( 'INN_HOSTED' ) {
+    define( 'INN_HOSTED', true) ;
+}
 // Include the Largo metabox API
 require_once( get_template_directory() . '/largo-apis.php' );
 
