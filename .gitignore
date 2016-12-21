@@ -120,4 +120,10 @@ wp-content/debug.log
 # !/wp-content/themes/example-theme-directory
 !/wp-content/themes/gijn
 !/wp-content/themes/gijn-impact
+!/wp-content/themes/gijc
+!/wp-content/themes/gijc2015
+!/wp-content/themes/gijc_br
 
+# this is Largo, sometime before https://github.com/INN/Largo/commit/4f4baa9aac95aae3a805f5bee02e6754a97a6b4a
+# I'm adding this direct because I'm not going to bother finding the actual commit for a submodule that we're doing to remove soon.
+!/wp-content/themes/largo_old
