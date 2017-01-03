@@ -37,7 +37,7 @@ class largo_follow_widget_gijn extends WP_Widget {
 			<?php endif;
 
 			if ( of_get_option( 'twitter_link' ) ) : ?>
-				<a href="<?php echo esc_url( of_get_option( 'twitter_link' ) ); ?>" class="twitter-follow-button" data-width="100%" data-align="left" data-size="large"><?php printf( __('Follow @%1$s', 'largo'), largo_twitter_url_to_username ( of_get_option( 'twitter_link' ) ) ); ?></a>
+				<a href="<?php echo esc_url( of_get_option( 'twitter_link' ) ); ?>" class="twitter-follow-button" data-width="100%" data-align="left" data-size="large"><?php printf( __('Follow @%1$s', 'largo'), twitter_url_to_username ( of_get_option( 'twitter_link' ) ) ); ?></a>
 			<?php endif;
 
 			if ( of_get_option( 'linkedin_link' ) ) : ?>
