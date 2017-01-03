@@ -5,7 +5,7 @@ define( 'INN_MEMBER', FALSE );
 function gijn_enqueue() {
 	wp_enqueue_style( 'gijn-stylesheet', get_stylesheet_directory_uri().'/style.css' );	//often overridden by custom-less-variables version
 }
-add_action( 'wp_enqueue_scripts', 'gijn_enqueue' );
+add_action( 'wp_enqueue_scripts', 'gijn_enqueue', 20 );
 
 // setup the custom follow widget
 require_once( get_stylesheet_directory() . '/largo-follow-gijn.php' );
