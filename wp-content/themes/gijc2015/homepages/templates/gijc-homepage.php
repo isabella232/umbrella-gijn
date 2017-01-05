@@ -13,7 +13,7 @@ global $largo, $shown_ids, $tags;
 
 	<?php get_template_part( 'partials/home', 'bottom-widget-area' ); ?>
 
-	<aside id="partners" class="row-fluid widget clearfix">
+	<aside id="partners" class="row-fluid clearfix">
 		<?php dynamic_sidebar( 'partners' ); ?>
 	</aside>
 
