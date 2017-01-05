@@ -13,7 +13,6 @@ a:hover { color: #005b7f; }
 
 .widgettitle,
 .stories h3.widgettitle,
-.tags ul li,
 .btn-primary,
 .sticky-related,
 .sticky-solo {
@@ -24,7 +23,8 @@ a:hover { color: #005b7f; }
   color: #fff;
   padding: 2px;
 }
-.stories h3.widgettitle a {
+.stories h3.widgettitle a,
+h3.widgettitle a {
   color: #fff;
 }
 #site-footer .widgettitle {
@@ -32,12 +32,16 @@ a:hover { color: #005b7f; }
   -moz-border-radius: 0;
   border-radius: 0;
 }
-#site-header img,
-#sidebar .widget,
-#left-rail .widget {
+#sponsors,
+#sidebar .widget {
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ddd;
+  padding: 12px;
+  margin-bottom: 24px;
 }
 .global-nav ul.lang-nav li {
   margin-right: 8px;
@@ -80,7 +84,6 @@ a:hover { color: #005b7f; }
   background-color: #005b7f;
   border: 1px solid #eee;
 }
-.tags ul li:hover,
 .btn-primary:hover,
 .pager a:hover,
 #related-post-nav a:hover,
@@ -101,11 +104,17 @@ a:hover { color: #005b7f; }
 .view-container-border {
   background-color: #fff;
 }
-.subscribe i.icon-mail {
-  background-color: #333;
-  padding-left: 4px;
+.widget .subscribe i.icon-linkedin,
+.widget .subscribe i.icon-rss,
+.widget .subscribe i.icon-mail {
+  color: #7d8185;
+  padding: 0 4px;
 }
-.subscribe i.icon-mail:hover { background-color: #444; }
+.widget .subscribe:hover i.icon-linkedin,
+.widget .subscribe:hover i.icon-rss,
+.widget .subscribe:hover i.icon-mail {
+  color: #222;
+}
 .donate-btn .icon-heart { display: none; }
 
 #homepage-bottom {
