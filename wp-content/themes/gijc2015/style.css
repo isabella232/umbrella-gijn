@@ -133,6 +133,9 @@ h3.widgettitle a {
   margin-bottom: 0;
   background-color: transparent;
 }
+#homepage-bottom .widgettitle a {
+  color: #000;
+}
 #homepage-bottom img {
   max-width: 100%;
   margin-bottom: 8px;
