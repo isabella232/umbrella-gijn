@@ -43,15 +43,6 @@ add_action( 'widgets_init', 'gijn_widgets' );
 
 function gijc_register_sidebars() {
 	register_sidebar( array(
-			'name' 			=> __( 'Projects Page', 'largo' ),
-			'desc' 			=> __( 'Projects on the networking page', 'largo' ),
-			'id' 			=> 'projects-bottom',
-			'before_widget' => '<aside id="%1$s" class="%2$s clearfix">',
-			'after_widget' 	=> "</aside>",
-			'before_title' 	=> '<h3 class="widgettitle">',
-			'after_title' 	=> '</h3>',
-		) );
-	register_sidebar( array(
 			'name' 			=> __( 'Sponsors', 'largo' ),
 			'desc' 			=> __( 'The sponsors section on the homepage', 'largo' ),
 			'id' 			=> 'sponsors',

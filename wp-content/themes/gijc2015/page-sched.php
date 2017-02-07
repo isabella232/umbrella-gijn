@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Sched Pages
- * Description: Shows widgets in the projects widget area
+ * Description: Shows widgets in the schedule widget area
  */
 get_header();
 ?>
