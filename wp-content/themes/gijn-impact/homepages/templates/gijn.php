@@ -78,7 +78,7 @@
 					<a href="/report/"
 						title="Impact: The Report"
 						rel="bookmark">
-						<?php echo wp_get_attachment_image(212, 'full'); ?>
+						<?php echo wp_get_attachment_image(1756, 'full'); ?>
 					</a>
 				</div>
 			</div>
