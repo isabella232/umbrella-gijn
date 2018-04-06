@@ -47,7 +47,7 @@ Each conference site is a site within the multisite network.
 2. Run a backup
 3. Add desired domain under "Domains" tab
 	* It will likely take a few hours for the DNS status to update to green
-4. Check off the Enable CDN box under the "CDN" tab
+4. Under the "CDN" tab, ensure that Enable CDN is checked ✅ for your new domain
 5. "Network activate" the [MultiSite Clone Duplicator](https://wordpress.org/plugins/multisite-clone-duplicator/) plugin
 6. Duplicate the most-recent conference site for that conference series
 	* Use largo@inn.org for the admin email address
