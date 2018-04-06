@@ -38,3 +38,18 @@ After reviewing the options and creating the new install, partake in the followi
 11. Search and replace 'gijn.wpengine.com' --> 'TKTKNAME.dev' in the db (options for doing this are covered in the [largo umbrella setup instructions](https://github.com/INN/docs/blob/master/projects/largo/umbrella-setup.md)
 12. Optionally, you may want to pull down recent uploads so you have images, etc. to work with locally.
 13. Visit gijn.dev in your browser and you should see the site!
+
+## Creating new sites for conferences:
+
+Each conference site is a site within the multisite network.
+
+1. Gain access to hosting dashboard
+2. Run a backup
+3. Add desired domain under "Domains" tab
+	* It will likely take a few hours for the DNS status to update to green
+4. Under the "CDN" tab, ensure that Enable CDN is checked ✅ for your new domain
+5. "Network activate" the [MultiSite Clone Duplicator](https://wordpress.org/plugins/multisite-clone-duplicator/) plugin
+6. Duplicate the most-recent conference site for that conference series
+	* Use largo@inn.org for the admin email address
+7. If needed, set up a domain mapping for the subdomain, if the conference uses a domain other than `gijn.org`
+
