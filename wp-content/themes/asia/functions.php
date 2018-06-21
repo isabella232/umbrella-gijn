@@ -2,6 +2,17 @@
 // hides the INN logo and feed of member stories
 define( 'INN_MEMBER', FALSE );
 
+/**
+ * Includes
+ */
+$includes = array(
+	'/inc/open-graph.php',
+);
+// Perform load
+foreach ( $includes as $include ) {
+	require_once( get_stylesheet_directory() . $include );
+}
+
 function gijn_enqueue() {
 	wp_enqueue_style( 'gijn-stylesheet', get_stylesheet_directory_uri().'/style.css' );	//often overridden by custom-less-variables version
 }
