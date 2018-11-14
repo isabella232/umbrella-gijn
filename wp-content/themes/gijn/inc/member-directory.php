@@ -451,7 +451,7 @@ function network_member_alpha_links() {
  * Make WP_Query support title_starts_with
  */
 add_filter( 'posts_where', 'network_title_starts_with', 10, 2 );
-function network_title_starts_with( $where, &$wp_query ) {
+function network_title_starts_with( $where, $wp_query ) {
   global $wpdb;
   //needs to handle digits, ugh
   if ( $title_starts_with = $wp_query->get( 'title_starts_with' ) ) {
