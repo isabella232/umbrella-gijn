@@ -177,7 +177,11 @@ function network_geocode_member( $post_id ) {
 
 	// Try to geocode it
 	$ch = curl_init();
-	$curl_url = "http://maps.googleapis.com/maps/api/geocode/json?address=" . $post_address . "&sensor=false";
+	$curl_url = sprintf(
+		'https://maps.googleapis.com/maps/api/geocode/json?address=%1$s&key=%2$s',
+		$post_address,
+		of_get_option( 'google_maps_api_key' )
+	);
 	curl_setopt($ch, CURLOPT_HEADER, 0);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	curl_setopt($ch, CURLOPT_URL, $curl_url);
@@ -191,6 +195,7 @@ function network_geocode_member( $post_id ) {
 	} else {
 		update_post_meta( $post_id, 'network_coords', '' );
 		//TO DO: display error message on geocode fail
+		error_log(var_export( $result, true));
 		add_filter( 'redirect_post_location', 'network_geocode_error' );
 	}
 }
@@ -451,7 +456,7 @@ function network_member_alpha_links() {
  * Make WP_Query support title_starts_with
  */
 add_filter( 'posts_where', 'network_title_starts_with', 10, 2 );
-function network_title_starts_with( $where, &$wp_query ) {
+function network_title_starts_with( $where, $wp_query ) {
   global $wpdb;
   //needs to handle digits, ugh
   if ( $title_starts_with = $wp_query->get( 'title_starts_with' ) ) {
