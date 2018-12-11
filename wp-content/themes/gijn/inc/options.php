@@ -10,20 +10,26 @@ function gijn_custom_options($options) {
 		'type' => 'heading'
 	);
 	$options[] = array(
-		'desc' 	=> __('<strong>Google Maps API key</strong> (Used for geocoding member locations, for <a href="https://gijn.org/member/">gijn.org/member</a>https://po.missouri.edu/cgi-bin/wa?A0=GLOBAL-L)', 'gijn'),
-		'id' 	=> 'google_maps_api_key',
-		'std' 	=> '',
-		'type' 	=> 'text'
+		'desc' => __('<strong>Google Maps API key</strong> (Used for geocoding member locations, for <a href="https://gijn.org/member/">gijn.org/member</a>https://po.missouri.edu/cgi-bin/wa?A0=GLOBAL-L)', 'gijn'),
+		'id'   => 'google_maps_api_key',
+		'std'  => '',
+		'type' => 'text'
+	);
+	$options[] = array(
+		'desc' => __('<strong>Frontend Google Maps API key</strong> (Used for displaying the map of member locations at <a href="https://gijn.org/member/">gijn.org/member</a>)', 'gijn'),
+		'id'   => 'google_maps_api_key_frontend',
+		'std'  => '',
+		'type' => 'text'
 	);
 	$options[] = array(
 		'name' => __('Additional Social Links', 'gijn'),
 		'type' => 'info'
 	);
 	$options[] = array(
-		'desc' 	=> __('<strong>Link for GIJN Listserv</strong> (https://po.missouri.edu/cgi-bin/wa?A0=GLOBAL-L)', 'gijn'),
-		'id' 	=> 'listserv_link',
-		'std' 	=> '',
-		'type' 	=> 'text'
+		'desc' => __('<strong>Link for GIJN Listserv</strong> (https://po.missouri.edu/cgi-bin/wa?A0=GLOBAL-L)', 'gijn'),
+		'id'   => 'listserv_link',
+		'std'  => '',
+		'type' => 'text'
 	);
 	return $options;
 }
