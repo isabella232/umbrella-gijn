@@ -12,10 +12,10 @@ get_header();
 	</header>
 
 		<?php
-			//alphabet, abstracted in network_members.php
+			//alphabet, abstracted in inc/member-directory.php
 			network_member_alpha_links();
 
-			//map, abstracted in network_members.php
+			//map, abstracted in inc/member-directory.php
 			network_member_map();
 		?>
 
