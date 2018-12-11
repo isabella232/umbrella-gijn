@@ -1,11 +1,15 @@
+## Deploys
+
+This repo is designed for use with [WP Engine's `git push` deploy mechanism](https://wpengine.com/git/).
+
+```
+git remote add wpe-prod git@git.wpengine.com:production/gijn.git
+git remote add wpe-staging git@git.wpengine.com:staging/gijn.git
+```
+
+This site uses WPE's one-click staging site.
+
 ## Setup instructions
-
-This repository is designed to be set up in accordance with the VVV install instructions in INN/docs, that were introduced with https://github.com/INN/docs/pull/148
-
-
-```
-vv create
-```
 
 Prompt | Text to enter 
 ------------ | -------------
@@ -20,24 +24,6 @@ Local SQL file to import for database (leave blank to skip): | *This directory m
 Remove default themes and plugins? (y/N): | y
 Add sample content to site (y/N): | N
 Enable WP_DEBUG and WP_DEBUG_LOG (y/N): | N
-
-After reviewing the options and creating the new install, partake in the following steps:
-
-1. `cd` to the directory `gijn/` in your VVV setup
-2. `git clone git@github.com:INN/umbrella-gijn.git`
-3. `cd umbrella-gijn`
-4. `git submodule update --init` to pull down all of the submodules you need (including, crucially, the tools repo)
-5. `cd ..`
-6. Copy the contents of the new directory `umbrella-gijn/` into `htdocs/`, including all hidden files whose names start with `.` periods.
-	- the easy way to do this is: `rsync -rv umbrella-gijn/ htdocs`
-	- after doing this you may want to `rm -rf umbrella-gijn` to save disk space
-7. `cd htdocs` to move to the folder where the umbrella now lives
-8. `workon fabric`
-9. `fab production wp.fetch_sql_dump` (or download via FTP if this doesn't work)
-10. `fab vagrant.reload_db:mysql.sql`
-11. Search and replace 'gijn.wpengine.com' --> 'TKTKNAME.dev' in the db (options for doing this are covered in the [largo umbrella setup instructions](https://github.com/INN/docs/blob/master/projects/largo/umbrella-setup.md)
-12. Optionally, you may want to pull down recent uploads so you have images, etc. to work with locally.
-13. Visit gijn.dev in your browser and you should see the site!
 
 ## Creating new sites for conferences:
 
