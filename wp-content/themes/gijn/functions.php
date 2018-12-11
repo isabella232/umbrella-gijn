@@ -15,7 +15,6 @@ if ( !defined( 'INN_HOSTED' ) ) {
 $includes = array(
 	'/inc/member-directory.php', // member directory
 	'/inc/options.php', // additional theme options
-	'/inc/open-graph.php',
 );
 // Perform load
 foreach ( $includes as $include ) {
