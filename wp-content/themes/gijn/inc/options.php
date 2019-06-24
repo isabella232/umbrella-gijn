@@ -10,7 +10,7 @@ function gijn_custom_options($options) {
 		'type' => 'heading'
 	);
 	$options[] = array(
-		'desc' => __('<strong>Google Maps API key</strong> (Used for geocoding member locations, for <a href="https://gijn.org/member/">gijn.org/member</a>https://po.missouri.edu/cgi-bin/wa?A0=GLOBAL-L)', 'gijn'),
+		'desc' => __('<strong>Google Maps API key</strong> (Used for geocoding member locations, for <a href="https://gijn.org/member/">gijn.org/member</a>)', 'gijn'),
 		'id'   => 'google_maps_api_key',
 		'std'  => '',
 		'type' => 'text'
