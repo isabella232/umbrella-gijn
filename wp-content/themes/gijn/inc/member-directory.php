@@ -337,7 +337,7 @@ class members_widget extends WP_Widget {
 function network_member_map() {
 
 	$members = get_members();
-	$api_key = get_option( 'google_maps_api_key_frontend', 'AIzaSyD82h0mNBtvoOmhC3N4YZwqJ_xLkS8yTuw' );
+	$api_key = of_get_option( 'google_maps_api_key_frontend', 'AIzaSyD82h0mNBtvoOmhC3N4YZwqJ_xLkS8yTuw' );
 	?>
 	<div id="map-container">
 	</div>
