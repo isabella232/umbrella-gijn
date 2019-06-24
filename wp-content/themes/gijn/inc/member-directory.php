@@ -1,7 +1,8 @@
 <?php
-
 /**
- *  ==============  Membership Directory stuff  ==============
+ * Membership Directory stuff
+ *
+ * @link gijn.org/member
  */
 
 /**
